@@ -4,9 +4,9 @@ import { requireSignIn } from "../middlewares/authMiddleware.js"
 
 const router = express.Router()
 
-router.post('/addtask', requireSignIn, addtaskController)
-router.put('/updatetask/:id', requireSignIn, updateTaskController)
-router.delete('/deletetask/:id', requireSignIn, deleteTaskController)
+router.post('/addtask', addtaskController)
+router.put('/updatetask/:id',  updateTaskController)
+router.delete('/deletetask/:id',  deleteTaskController)
 router.get('/getsingletask/:id', getSingleTaskController)
 router.get('/getalltasks/:email', getAllTaskController)
 
